@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="baffle.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="baffle">
+		&#x2800 &#x2801 &#x2802 &#x2803 &#x2804 &#x2805 &#x2806 &#x2807  &#x2808 &#x2809 &#x280A &#x280B  &#x280C &#x280D &#x280E &#x280F  &#x2810 &#x2811 &#x2812 &#x2813  &#x2814 &#x2815 &#x2816 &#x2817  &#x2818 &#x2819 &#x281A &#x281B  &#x281C &#x281D &#x281E &#x281F  &#x2820 &#x2821 &#x2822 &#x2823  &#x2824 &#x2825 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  
+	</div>
+	<div class="baffle2">
+		&#x2818 &#x2819 &#x281A &#x281B  &#x281C &#x281D &#x281E &#x281F  &#x2820 &#x2821 &#x2822 &#x2823  &#x2824 &#x2825 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803  &#x2800 &#x2801 &#x2802 &#x2803 &#x2801 &#x2802 &#x2803 &#x2804 &#x2805 &#x2806 &#x2807  &#x2808 &#x2809 &#x280A &#x280B  &#x280C &#x280D &#x280E &#x280F  &#x2810 &#x2811 &#x2812 &#x2813  &#x2814 &#x2815 &#x2816 &#x2817  &#x2818
+	</div>
+</body>
+
+<style type="text/css">
+
+	body {
+		background-color: black;
+	}
+
+	.baffle {
+		display:block;
+		position:relative;
+		font-family: 'Roboto Mono', monospace;
+		font-size: 17px;
+		color: white;
+    	animation: baffle1 15s linear infinite;
+	}
+			@keyframes baffle1 {
+		    0%   {left: 100%;}
+		    100% {left: -100%;}
+			}
+
+	.baffle2 {
+		font-family: 'Roboto Mono', monospace;
+		font-size: 7px;
+		color: white;
+	    animation-iteration-count: infinite;
+	}
+	
+</style>
+
+<script type="text/javascript">	
+	var b = baffle('.baffle');
+	b.set({speed: 150, characters: '\u2800 \u2801 \u2803 \u2804 \u2805 \u2806'}).reveal(60000);
+
+	var c = baffle('.baffle2');
+	c.set({speed: 157, characters: '\u2810 \u2811 \u2812 \u2813 \u2814 \u2815 \u2441 \u2442 \u2443 \u2444 \u2445 \u2446 \u2447 \u2448 \u2449 \u244A'}).reveal(60000);
+</script>
+</html>
+
+
+/////////////////////////
+/* NOTES
+Layer z-indexes of css, e.g. baffle on top of different colored baffles, moving at different speeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

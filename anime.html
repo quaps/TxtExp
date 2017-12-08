@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="baffle.min.js"></script>
+	<script src="anime.min.js"></script>
+
+
+</head>
+<body>
+</body>
+
+<style type="text/css">
+	  body {
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+    }
+    .wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .particule {
+      position: absolute;
+    }
+</style>
+
+<script type="text/javascript">
+	var numberOfEls = 1000;
+    var duration = 1000;
+    var midScreenX = window.innerWidth / 3;
+    var midScreenY = window.innerHeight / 2;
+    var radius = Math.sqrt(midScreenX * midScreenX + midScreenY * midScreenY);
+    var fragment = document.createDocumentFragment();
+
+    for (var i = 0; i < numberOfEls; i++) {
+      var hue = Math.round(360 / numberOfEls * i);
+      var angle = Math.random() * Math.PI * 3;
+      var el = document.createElement('div');
+      el.classList.add('particule');
+      el.style.backgroundColor = 'hsl(' + hue + ', 50%, 80%)';
+      el.style.width = '100px';
+      el.style.height = '100px';
+      anime({
+        targets: el,
+        width: ['500px', '500px'],
+        height: ['1px', '500px'],   
+        delay: (duration / numberOfEls) * i,
+        duration: duration,
+        easing: 'easeInExpo',
+        loop: true
+      });
+      fragment.appendChild(el);
+    }
+
+    document.body.appendChild(fragment);
+
+</script>
+</html>
